@@ -1,0 +1,27 @@
+@defer (on timer (1000ms)) {
+<div class="w-full h-full relative flex flex-col items-center justify-end">
+    <app-back-arrow />
+
+    <div class="w-[80%] md:w-[50%] h-[50vh] grid gap-2 mt-12"
+        [style]="{ 'grid-template-columns': 'repeat(' + param + ', 1fr)' }">
+        @for (memo of arrayMemotest; track $index) {
+        <app-card [index]="$index" (indexActive)="indexActive($event)">
+            {{memo}}
+        </app-card>
+        }
+    </div>
+    <div class="flex flex-wrap items-center justify-between w-[50%] gap-4 mt-2 md:mt-12">
+        <div class="flex gap-2 text-white">
+            <p>Movimientos:</p>
+            <span>{{quantityMoves}}</span>
+        </div>
+        <div class="flex gap-2 text-white">
+            <p>Tiempo:</p>
+            <span>{{time}}</span>
+        </div>
+    </div>
+
+</div>
+} @placeholder {
+<span class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">iniciando juego ...</span>
+}

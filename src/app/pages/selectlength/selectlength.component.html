@@ -1,0 +1,19 @@
+<h3 class="text-center text-white mt-12">Selecciona el tamaño del tablero de juego</h3>
+
+
+<div class="w-full h-full p-4 mt-4 flex flex-wrap gap-4 items-center justify-center">
+
+    @for (measure of arrayMeasures; track $index) {
+    <div (click)="selectMeasure(measure.value)"
+        class="w-full md:w-[45%] lg:w-[30%] xl:w-[20%] h-[320px] p-8 bg-slate-400 rounded shadow-2xl flex flex-col items-center justify-center gap-4 cursor-pointer hover:scale-110 hover:bg-white duration-300">
+
+        <div class="grid gap-[5px]" [style]="{ 'grid-template-columns': 'repeat(' + measure.value + ', 1fr)' }">
+            @for (_ of getRange(measure.value * measure.value); track $index) {
+            <i class="fa-solid fa-{{ measure.icon }}"></i>
+            }
+        </div>
+
+        <div>{{ measure.type }}</div>
+    </div>
+    }
+</div>

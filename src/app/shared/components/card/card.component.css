@@ -1,0 +1,10 @@
+.rotate {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.isMatch {
+  background-color: aquamarine;
+  color: white;
+}

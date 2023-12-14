@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(63, 95, 251);
+  background: linear-gradient(
+    90deg,
+    rgba(63, 95, 251, 1) 0%,
+    rgba(77, 77, 77, 1) 92%
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 20px;
+}
