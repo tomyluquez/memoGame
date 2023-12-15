@@ -1,4 +1,4 @@
-<div class="px-[100px] py-[50px] fixed left-1/2 bg-red-300 -translate-x-1/2 -translate-y-1/2 rounded shadow-2xl z-10 duration-300 flex flex-col items-center justify-center"
+<div class="px-[100px] py-[50px] fixed left-1/2 bg-gray-700 text-white -translate-x-1/2 -translate-y-1/2 rounded shadow-2xl z-10 duration-500 flex flex-col items-center justify-center"
     [class]="{'top-1/2' : isOpen, 'top-[-100%]' : !isOpen }">
 
     <h3>FELICITACIONES ! </h3>
@@ -13,7 +13,7 @@
             <span class="text-slate-300">{{time}}</span>
         </div>
     </div>
-    <div class="flex w-full items-center justify-center gap-4 mt-8">
+    <div class="flex w-full items-center justify-center gap-4 mt-8 text-black">
         <button (click)="toHome()" class="bg-slate-300 hover:bg-white rounded shadow-2xl px-4 py-2 duration-300">Nuevo
             Juego</button>
     </div>
